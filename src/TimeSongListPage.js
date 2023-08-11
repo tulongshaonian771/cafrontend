@@ -15,11 +15,13 @@ import './assets/plugins/fontawesome/css/all.min.css';
 import './assets/plugins/datatables/datatables.min.css';
 // Import Main CSS
 import './assets/css/style.css';
+import Profile from "./Profile";
 import LocationSongTable from "./LocationSongTable";
+import LandingPage from "./landingPage";
+import TimeSongTable from "./TimeSongTable";
 
 
-
-function LocationSongListPage() {
+function TimeSongListPage() {
 
     return (
         <>
@@ -42,7 +44,7 @@ function LocationSongListPage() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <LocationSongTable/>
+                                        <TimeSongTable/>
                                     </div>
                                 </div>
 
@@ -69,4 +71,4 @@ function LocationSongListPage() {
         </>
     );
 }
-export default LocationSongListPage;
+export default TimeSongListPage;

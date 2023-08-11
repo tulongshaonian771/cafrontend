@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 
-const LocationSongTable = () => {
+const PublicTable = () => {
     const [Songs, setSongs] = useState([]);
     const [selectedSong, setSelectedSong] = useState(null);
     const [countdown, setCountdown] = useState(0);
@@ -10,7 +10,6 @@ const LocationSongTable = () => {
     const username = localStorage.getItem("username")
 
     useEffect(() => {
-        // 获取地理位置并发送到后端
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 position => {
@@ -19,8 +18,7 @@ const LocationSongTable = () => {
 
                     setLocation({ latitude, longitude });
 
-                    // 发送位置信息到后端
-                    fetch('http://localhost:8080/time', {
+                    fetch('http://localhost:8080/public', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -29,9 +27,8 @@ const LocationSongTable = () => {
                     })
                         .then(response => response.json())
                         .then(data => {
-                        // 处理从后端获取的歌单数据
-                        setSongs(data);
-                    })
+                            setSongs(data);
+                        })
                         .catch(error => {
                             console.error('Error:', error);
                         });
@@ -45,34 +42,10 @@ const LocationSongTable = () => {
         }
     }, []);
 
-
-    const startCountdown = (duration) => {
-        setCountdown(duration); // Set countdown time to 10 seconds (you can adjust as needed)
-    };
-
-    useEffect(() => {
-        if (countdown > 0 && selectedSong) {
-            countdownTimer.current = setTimeout(() => {
-                setCountdown(countdown - 1);
-            }, 1);
-        } else if (countdown === 0 && selectedSong) {
-            axios
-                .post('http://localhost:8080/record', { songURI: selectedSong, location, username})
-                .then((response) => {
-                    console.log('Data sent to backend:', response.data);
-                })
-                .catch((error) => {
-                    console.error('Error sending data to backend:', error);
-                });
-        }
-        return () => clearTimeout(countdownTimer.current);
-    }, [countdown, selectedSong]);
-
     const handleClick = (song) => {
         if (selectedSong === song.uri) {
         } else {
             setSelectedSong(song.uri);
-            startCountdown(song.duration);
         }
     };
 
@@ -110,4 +83,4 @@ const LocationSongTable = () => {
     );
 };
 
-export default LocationSongTable;
+export default PublicTable;

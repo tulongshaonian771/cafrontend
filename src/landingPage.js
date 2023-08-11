@@ -378,7 +378,11 @@ export default class LandingPage extends React.Component {
   }
   render() {
     const { data, songs, showEmbeddedPlayers, realLocation } = this.state;
-
+// 获取第一个歌曲的 holiday 属性
+    let firstSongHoliday = "";
+    if (songs.length > 0) {
+      firstSongHoliday = songs[0].holiday;
+    }
     const playlistElements = data.map((item) =>
       item.tracks.map((playlist) => this.createPlaylistElement(playlist))
     );
@@ -392,7 +396,7 @@ export default class LandingPage extends React.Component {
             <h2>Recommended SongList</h2>
             <div className="playlist-group">
               <div className="list">
-                <Link to="/songlist" className="item">
+                <Link to="/locationlist" className="item">
                   <img
                       src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
                       alt="Recommended Playlist"
@@ -403,7 +407,7 @@ export default class LandingPage extends React.Component {
                   <h4>Location</h4>
                   <p>Recommended base on location</p>
                 </Link>
-                <Link to="/songlist" className="item">
+                <Link to="/timelist" className="item">
                   <img
                       src="https://i.scdn.co/image/ab67706f000000032390c211511e2d985935b267"
                       alt="Recommended Playlist"
@@ -420,7 +424,7 @@ export default class LandingPage extends React.Component {
           </div>
 
           <div className="spotify-playlists">
-            <h2>Spotify Generated Playlists Based on holiday</h2>
+            <h2>{firstSongHoliday}</h2>
             <table style={{ borderCollapse: 'separate', borderSpacing: '20px' }}>
               <tbody>
               <tr>

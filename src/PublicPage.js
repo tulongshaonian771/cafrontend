@@ -16,10 +16,11 @@ import './assets/plugins/datatables/datatables.min.css';
 // Import Main CSS
 import './assets/css/style.css';
 import LocationSongTable from "./LocationSongTable";
+import PublicTable from "./PublicTable";
 
 
 
-function LocationSongListPage() {
+function PublicPage() {
 
     return (
         <>
@@ -42,7 +43,7 @@ function LocationSongListPage() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <LocationSongTable/>
+                                        <PublicTable/>
                                     </div>
                                 </div>
 
@@ -69,4 +70,4 @@ function LocationSongListPage() {
         </>
     );
 }
-export default LocationSongListPage;
+export default PublicPage;
