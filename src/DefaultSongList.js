@@ -454,29 +454,6 @@ export default class DefaultSongList extends React.Component {
                         </div>
                         <br/>
                     </div>
-                    <div className="preview">
-                        <div className="text">
-                            <h6>Preview of Spotify</h6>
-                            <p>
-                                Sign up to get unlimited songs and podcasts. Just S$8 monthly.
-                                Cancel anytime
-                            </p>
-                        </div>
-                        {/* <div className="button">
-              <button type="button" onClick={this.handleSignUpClick1}>Sign up</button> */}
-                        <StripeCheckout
-                            stripeKey="pk_test_51JtOlaGkAJALrYglTKKou5xAdwP3A1tvxNt9RMnuI1Sjjkxmvh30Ve5QiB5DPO9HF11vrvHmbKwX0QH7El3weEiF005CItRQ7U" // Your Stripe publishable key
-                            name="Subscription Form"
-                            description="$8 Monthly Subscription"
-                            panelLabel="Direct to Stripe Checkout"
-                            amount={800} // Amount in cents (i.e., $8)
-                            currency="SGD"
-                            allowRememberMe={false}
-                            email=""
-                            token={this.handleSubscription} // Pass the handleSubscription function
-                            image="https://www.obsmentor.com/wp-content/uploads/2021/10/PREMIUM-ICON.png"
-                        />
-                    </div>
                 </div>
                 {/* </div> */}
 
