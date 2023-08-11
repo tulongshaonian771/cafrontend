@@ -25,11 +25,11 @@ export default function sidebar() {
                                                     <li>
                                                             {shouldRenderButtons && (
                                                                 <>
-                                                                        <Link to="/songlist" className="nav-link">
+                                                                        <Link to="/locationlist" className="nav-link">
                                                                                 <i className="fas fa-th-large" />
                                                                                 <span>Location SongList</span>
                                                                         </Link>
-                                                                        <Link to="/songlist" className="nav-link">
+                                                                        <Link to="/timelist" className="nav-link">
                                                                                 <i className="fas fa-th-large" />
                                                                                 <span>Time SongList</span>
                                                                         </Link>

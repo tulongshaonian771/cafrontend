@@ -6,11 +6,9 @@ export default function Headbar() {
     const isSessionExist = localStorage.getItem('username') && localStorage.getItem('password');
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const handleLogout = () => {
-        // 清除本地存储中的数据
         localStorage.removeItem('username');
         localStorage.removeItem('password');
 
-        // 或者清除会话存储中的数据
         // sessionStorage.removeItem('username');
         // sessionStorage.removeItem('password');
     };
@@ -33,7 +31,7 @@ export default function Headbar() {
 
             {/* Header Right Menu */}
             <ul className="nav user-menu">
-                {isSessionExist ? ( // 根据session的存在与否来显示不同内容
+                {isSessionExist ? (
                     // Header Right Menu
                     <li className={`nav-item dropdown ${dropdownOpen ? 'show' : ''}`}>
                         <a
@@ -54,7 +52,6 @@ export default function Headbar() {
                             className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}
                             style={{ left: '-130px' }}
                         >
-                            {/* 下拉菜单内容 */}
                             <div className="user-header">
                                 <div className="avatar avatar-sm">
                                     <img
@@ -77,7 +74,6 @@ export default function Headbar() {
                         </div>
                     </li>
                 ) : (
-                    // 当session不存在时，显示Login按钮
                     <li className="nav-item">
                         <Link className="nav-link" to="/login">
                             Login
@@ -85,7 +81,6 @@ export default function Headbar() {
                     </li>
                 )}
             </ul>
-            {/* /Header Right Menu */}
         </>
     );
 }
