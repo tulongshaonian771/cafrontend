@@ -1,13 +1,13 @@
 import React, {useState, useEffect, useRef} from 'react';
 import axios from 'axios';
 
-const TimeSongTable = () => {
+const AfterLoginSongTable = () => {
     const [Songs, setSongs] = useState([]);
     const [selectedSong, setSelectedSong] = useState(null);
     const [countdown, setCountdown] = useState(0);
     const countdownTimer = useRef(null); // Use useRef instead of declaring at the top
     const [location, setLocation] = useState(null);
-    const username = localStorage.getItem("username");
+    const username = localStorage.getItem("username")
 
     useEffect(() => {
         // 获取地理位置并发送到后端
@@ -20,7 +20,7 @@ const TimeSongTable = () => {
                     setLocation({ latitude, longitude });
 
                     // 发送位置信息到后端
-                    fetch('http://localhost:8080/time', {
+                    fetch('http://localhost:8080/after', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -110,4 +110,4 @@ const TimeSongTable = () => {
     );
 };
 
-export default TimeSongTable;
+export default AfterLoginSongTable;

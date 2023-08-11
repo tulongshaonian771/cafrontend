@@ -491,118 +491,84 @@ export default class LandingPage extends React.Component {
         )} */}
 
           <div className="spotify-playlists">
-            <h2>Spotify Generated Playlists Based on Special Occassions</h2>
-            <div class="playlist-group">
-            <div className="list">
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Mood Booster</h4>
-                <p>Get happy with today's dose of feel-good...</p>
+            <h2>Recommended SongList</h2>
+            <div className="playlist-group">
+              <div className="list">
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
+
               </div>
 
-              {/* Add more Featured playlists items here */}
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Feelin' Good</h4>
-                <p>Feel good with this positively timeless...</p>
-              </div>
+              <div className="list">
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
+                <Link to="/after" className="item">
+                  <img
+                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      alt="Recommended Playlist"
+                  />
+                  <div className="play">
+                    <span className="fa fa-play"></span>
+                  </div>
+                  <h4>publicSong</h4>
+                  <p>popular song</p>
+                </Link>
 
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Dark & Stormy</h4>
-                <p>Beautifully dark, dramatic tracks.</p>
-              </div>
-              </div>
-              </div>
-
-              <div class="playlist-group">
-            <div className="list">
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Feel Good Piano</h4>
-                <p>Happy vibes for an upbeat morning.</p>
-              </div>
-
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Feelin' Myself</h4>
-                <p>The hip-hop playlist that's a whole mood...</p>
-              </div>
-
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Chill Tracks</h4>
-                <p>Softer kinda dance</p>
-              </div>
-              </div>
-              </div>
-              <br/>
-              </div>
-
-              {/* <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>Feel-Good Indie Rock</h4>
-                <p>The best indie rock vibes - classic and...</p>
-              </div>
-
-              <div className="item">
-                <img
-                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
-                  alt="Recommended Playlist"
-                />
-                <div className="play">
-                  <span className="fa fa-play"></span>
-                </div>
-                <h4>idk.</h4>
-                <p>idk.</p>
               </div>
             </div>
-
-            <hr />
-          </div> */}
-
+            <br/>
+          </div>
           <div className="preview">
             <div className="text">
               <h6>Preview of Spotify</h6>

@@ -20,7 +20,7 @@ const LocationSongTable = () => {
                     setLocation({ latitude, longitude });
 
                     // 发送位置信息到后端
-                    fetch('http://localhost:8080/time', {
+                    fetch('http://localhost:8080/location', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

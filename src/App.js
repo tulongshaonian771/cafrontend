@@ -8,6 +8,8 @@ import DefaultPage from "./DefaultPage";
 import LocationSongListPage from "./LocationSongListPage";
 import TimeSongListPage from "./TimeSongListPage";
 import PublicPage from "./PublicPage";
+import AfterLoginSongTable from "./AfterLoginSongTable";
+import AfterLoginSongList from "./AfterLoginSongList";
 
 const App = () => {
     const username = localStorage.getItem('username');
@@ -23,6 +25,7 @@ const App = () => {
                 <Route path="/defaultpage" element={<DefaultPage />} />
                 <Route path="/timelist" element={<TimeSongListPage />} />
                 <Route path="/publiclist" element={<PublicPage />} />
+                <Route path="/after" element={<AfterLoginSongList />} />
             </Routes>
         </Router>
     );
