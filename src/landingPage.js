@@ -262,18 +262,6 @@ export default class LandingPage extends React.Component {
   };
 
 
-
-  async componentDidMount() {
-    await this.loadStripeScript();
-  }
-
-  async loadStripeScript() {
-    const stripePublicKey =
-      "pk_test_51JtOlaGkAJALrYglTKKou5xAdwP3A1tvxNt9RMnuI1Sjjkxmvh30Ve5QiB5DPO9HF11vrvHmbKwX0QH7El3weEiF005CItRQ7U"; // Replace with your actual Stripe public key
-    const stripe = await loadStripe(stripePublicKey);
-    this.setState({ stripe });
-  }
-
   handleShowPlayers = () => {
 
     this.setState({ showEmbeddedPlayers: true });
@@ -317,7 +305,7 @@ export default class LandingPage extends React.Component {
       console.log(token.email);
 
       const customerResponse = await axios.post(
-        "http://localhost:9090/api/create-customer",
+        "http://localhost:8080/api/create-customer",
         {
           token: token.id,
           email: token.email,
@@ -338,19 +326,22 @@ export default class LandingPage extends React.Component {
     try {
       const { customerId } = this.state;
 
-      if (!customerId) {
-        console.error(
-          "Customer ID is missing. Please create a customer first."
-        );
-        return;
-      }
+      // if (!customerId) {
+      //   console.error(
+      //     "Customer ID is missing. Please create a customer first."
+      //   );
+      //   return;
+      // }
 
       const sessionResponse = await axios.post(
-        "http://localhost:9090/api/create-subscription",
+        "http://localhost:8080/api/create-subscription",
         {
           customerId: customerId,
+          username: localStorage.getItem("username"),
         }
+
       );
+      console.log("Customer id", customerId);
       const sessionId = sessionResponse.data;
 
       const { stripe } = this.state;
@@ -370,12 +361,24 @@ export default class LandingPage extends React.Component {
 
   async componentDidMount() {
     try {
+      const stripePublicKey =
+          "pk_test_51JtOlaGkAJALrYglTKKou5xAdwP3A1tvxNt9RMnuI1Sjjkxmvh30Ve5QiB5DPO9HF11vrvHmbKwX0QH7El3weEiF005CItRQ7U"; // Replace with your actual Stripe public key
+      const stripe = await loadStripe(stripePublicKey);
+
       const response = await axios.get('http://localhost:8080/holidays');
-      this.setState({ songs: response.data });
+      this.setState({ stripe, songs: response.data });
     } catch (error) {
       console.error('Error fetching songs:', error);
     }
   }
+
+  async loadStripeScript() {
+    const stripePublicKey =
+        "pk_test_51JtOlaGkAJALrYglTKKou5xAdwP3A1tvxNt9RMnuI1Sjjkxmvh30Ve5QiB5DPO9HF11vrvHmbKwX0QH7El3weEiF005CItRQ7U"; // Replace with your actual Stripe public key
+    const stripe = await loadStripe(stripePublicKey);
+    this.setState({ stripe });
+  }
+
   render() {
     const { data, songs, showEmbeddedPlayers, realLocation } = this.state;
 // 获取第一个歌曲的 holiday 属性
