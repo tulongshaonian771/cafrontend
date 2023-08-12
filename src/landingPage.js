@@ -396,7 +396,7 @@ export default class LandingPage extends React.Component {
         <div className="main-container">
 
           <div className="spotify-playlists">
-            <h2>Recommended SongList</h2>
+            <h2>Melodies of Past Memories: A Journey Through Time and Places</h2>
             <div className="playlist-group">
               <div className="list">
                 <Link to="/locationlist" className="item">
@@ -494,41 +494,41 @@ export default class LandingPage extends React.Component {
         )} */}
 
           <div className="spotify-playlists">
-            <h2>Recommended SongList</h2>
+            <h2>Unique Songs for You</h2>
             <div className="playlist-group">
               <div className="list">
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Soulful Sentiments</p>
                 </Link>
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67706f000000030f180de90cbadfb84133850e"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Mood Swing Melodies</p>
                 </Link>
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67706f00000003af7fe38324681b2cf2cdeaac"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Euphoric Expressions</p>
                 </Link>
 
               </div>
@@ -536,36 +536,36 @@ export default class LandingPage extends React.Component {
               <div className="list">
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67706f000000034279d952b1d720e19bb5a4f3"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Heartfelt Harmonies</p>
                 </Link>
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67706f000000035d1f50822b6d2a31b1fb3177"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Heartfelt Harmonies</p>
                 </Link>
                 <Link to="/after" className="item">
                   <img
-                      src="https://i.scdn.co/image/ab67616d0000b273b1fa9f60e11c8ee4ca7b5fee"
+                      src="https://i.scdn.co/image/ab67616d0000b2733d98a0ae7c78a3a9babaf8af"
                       alt="Recommended Playlist"
                   />
                   <div className="play">
                     <span className="fa fa-play"></span>
                   </div>
                   <h4>publicSong</h4>
-                  <p>popular song</p>
+                  <p>Emotional Echoes</p>
                 </Link>
 
               </div>
