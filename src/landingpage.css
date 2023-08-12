@@ -35,11 +35,11 @@
     margin-bottom: 10px;
 }
 .spotify-playlists .list .item .play {
-    position: relative;
+    position: absolute;
 }
 .spotify-playlists .list .item .play .fa {
-    position: absolute;
-    right: 100px;
+    position: relative;
+    right: -100px;
     top: -50px;
     padding: 18px;
     background-color: #1db954;
